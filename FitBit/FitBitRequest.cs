@@ -24,7 +24,7 @@ namespace FitBit
 
         public void SendRequest(string requestScope)
         {
-            string urlworkout = "https://api.fitbit.com/1/user/229XX2/" + requestScope +".json";
+            string urlworkout = "https://api.fitbit.com/1/user/36XJP9/" + requestScope +".json";
 
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlworkout);
@@ -42,7 +42,7 @@ namespace FitBit
 
             JObject resultsJSON = JObject.Parse(results);
 
-
+            Console.Write("Age" +   resultsJSON["user"]["age"]);
 
             response.Close();
             HttpStreamReader.Close();

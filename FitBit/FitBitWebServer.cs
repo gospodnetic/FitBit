@@ -12,7 +12,7 @@ namespace FitBit
 {
     public class FitBitWebServer
     {
-        //Create simple HTTP protocol _listener
+        //  Create simple HTTP protocol _listener
         private readonly HttpListener _listener = new HttpListener();
         private readonly Func<HttpListenerRequest, string> _responderMethod;
 
@@ -119,6 +119,9 @@ namespace FitBit
         }
 
     }
+
+
+
 
     public class FitBit
     {

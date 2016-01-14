@@ -46,7 +46,7 @@ namespace FitBit
         //Function to start Authentication process - opens browser for a user with a agree/deny dialog
         public void Authenticate()
         {
-            var brow = System.Diagnostics.Process.Start("https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=229XX2&scope=profile%20activity");
+            var brow = System.Diagnostics.Process.Start("https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=229XX2&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftest%2F&scope=profile%20activity");
         }
 
         //Generating request to exchange response code for access token
@@ -60,7 +60,7 @@ namespace FitBit
                 var data = new NameValueCollection();
                 data["grant_type"] = "authorization_code";
                 data["client_id"] = _ClientID;
-                data["redirect_uri"] = "http://localhost:8080/test";
+                data["redirect_uri"] = "http://localhost:8080/test/";
                 data["code"] = code;
 
                 wb.Headers["Authorization"] = "Basic " + token;
