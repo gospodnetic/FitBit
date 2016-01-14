@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 
@@ -36,13 +37,23 @@ namespace MongoConnection
 
         static void Main(string[] args)
         {
-            string line;
+            string line1;
             using (StreamReader reader = new StreamReader("user.json"))
             {
-                line = reader.ReadToEnd();
+                line1 = reader.ReadToEnd();
+            }
+            string line2;
+            using (StreamReader reader = new StreamReader("user2.json"))
+            {
+                line2 = reader.ReadToEnd();
             }
 
-            MongoDB.Bson.BsonDocument document = MongoDB.Bson.Serialization.BsonSerializer.Deserialize<BsonDocument>(line);
+            var a = JsonConvert.SerializeObject(new
+            {
+                obj1 = JObject.Parse(line1),
+                obj2 = JObject.Parse(line2)
+            });
+            MongoDB.Bson.BsonDocument document = MongoDB.Bson.Serialization.BsonSerializer.Deserialize<BsonDocument>(a);
             FitBitContext ctx = new FitBitContext();
             ctx.Users.InsertOne(document);
         }
