@@ -13,6 +13,13 @@ using Newtonsoft.Json.Linq;
 
 namespace FitBit
 {
+
+    public class JSONUserID
+    {
+        public string user_id { get; set; }
+    }
+
+
     class FitBitRequest
     {
         private string _accesToken;
@@ -22,9 +29,15 @@ namespace FitBit
             this._accesToken = accesToken;
         }
 
-        public void SendRequest(string requestScope)
+        // Functions for sending GET requests for the scope we have been granted to access to
+
+        public void SendRequest()
         {
-            string urlworkout = "https://api.fitbit.com/1/user/229XX2/" + requestScope +".json";
+
+            var userID = "36XJP9";
+            string jsonUserID = @"{userID:'36XJP9'}";
+
+            string urlworkout = "https://api.fitbit.com/1/user/" + userID + "/activities/date/2016-01-01.json";
 
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlworkout);
@@ -42,7 +55,7 @@ namespace FitBit
 
             JObject resultsJSON = JObject.Parse(results);
 
-
+            //Console.Write(resultsJSON);
 
             response.Close();
             HttpStreamReader.Close();
