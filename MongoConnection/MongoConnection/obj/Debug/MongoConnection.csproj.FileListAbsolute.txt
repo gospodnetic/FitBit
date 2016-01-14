@@ -1,0 +1,14 @@
+c:\users\petra\documents\visual studio 2015\Projects\MongoConnection\MongoConnection\bin\Debug\MongoConnection.exe.config
+c:\users\petra\documents\visual studio 2015\Projects\MongoConnection\MongoConnection\bin\Debug\MongoConnection.exe
+c:\users\petra\documents\visual studio 2015\Projects\MongoConnection\MongoConnection\bin\Debug\MongoConnection.pdb
+c:\users\petra\documents\visual studio 2015\Projects\MongoConnection\MongoConnection\bin\Debug\MongoDB.Bson.dll
+c:\users\petra\documents\visual studio 2015\Projects\MongoConnection\MongoConnection\bin\Debug\MongoDB.Driver.Core.dll
+c:\users\petra\documents\visual studio 2015\Projects\MongoConnection\MongoConnection\bin\Debug\MongoDB.Driver.dll
+c:\users\petra\documents\visual studio 2015\Projects\MongoConnection\MongoConnection\bin\Debug\MongoDB.Bson.xml
+c:\users\petra\documents\visual studio 2015\Projects\MongoConnection\MongoConnection\bin\Debug\MongoDB.Driver.xml
+c:\users\petra\documents\visual studio 2015\Projects\MongoConnection\MongoConnection\obj\Debug\MongoConnection.csprojResolveAssemblyReference.cache
+c:\users\petra\documents\visual studio 2015\Projects\MongoConnection\MongoConnection\obj\Debug\MongoConnection.exe
+c:\users\petra\documents\visual studio 2015\Projects\MongoConnection\MongoConnection\obj\Debug\MongoConnection.pdb
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\MongoConnection\MongoConnection\bin\Debug\MongoConnection.exe.config
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\MongoConnection\MongoConnection\obj\Debug\MongoConnection.exe
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\MongoConnection\MongoConnection\obj\Debug\MongoConnection.pdb
