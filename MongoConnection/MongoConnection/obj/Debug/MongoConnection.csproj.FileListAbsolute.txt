@@ -12,3 +12,16 @@ c:\users\petra\documents\visual studio 2015\Projects\MongoConnection\MongoConnec
 C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\MongoConnection\MongoConnection\bin\Debug\MongoConnection.exe.config
 C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\MongoConnection\MongoConnection\obj\Debug\MongoConnection.exe
 C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\MongoConnection\MongoConnection\obj\Debug\MongoConnection.pdb
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\bin\Debug\MongoConnection.exe.config
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\obj\Debug\MongoConnection.exe
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\obj\Debug\MongoConnection.pdb
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\obj\Debug\MongoConnection.csprojResolveAssemblyReference.cache
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\bin\Debug\MongoConnection.exe
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\bin\Debug\MongoConnection.pdb
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\bin\Debug\MongoDB.Bson.dll
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\bin\Debug\MongoDB.Driver.Core.dll
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\bin\Debug\MongoDB.Driver.dll
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\bin\Debug\MongoDB.Bson.xml
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\bin\Debug\MongoDB.Driver.xml
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\bin\Debug\Newtonsoft.Json.dll
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\MongoConnection\MongoConnection\bin\Debug\Newtonsoft.Json.xml

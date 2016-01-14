@@ -1,11 +1,12 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using Newtonsoft;
+using Newtonsoft.Json.Linq;
 
 
 namespace MongoConnection
@@ -18,14 +19,14 @@ namespace MongoConnection
         {
             var client = new MongoClient();
             db = client.GetDatabase("FitBit");
-            var collection = db.GetCollection<User>("Users");
+            var collection = db.GetCollection<BsonDocument>("Users");
         }
 
-        public IMongoCollection<User> Users
+        public IMongoCollection<BsonDocument> Users
         {
             get
             {
-                return db.GetCollection<User>("Users");
+                return db.GetCollection<BsonDocument>("Users");
             }
         }
     }
@@ -35,27 +36,15 @@ namespace MongoConnection
 
         static void Main(string[] args)
         {
+            string line;
+            using (StreamReader reader = new StreamReader("user.json"))
+            {
+                line = reader.ReadToEnd();
+            }
 
-
+            MongoDB.Bson.BsonDocument document = MongoDB.Bson.Serialization.BsonSerializer.Deserialize<BsonDocument>(line);
             FitBitContext ctx = new FitBitContext();
-            User user = new User();
-            user.Name = "Petra";
-            user.LastName = "Gospodnetić";
-            user.Age = "24";
-            ctx.Users.InsertOne(user);
+            ctx.Users.InsertOne(document);
         }
-    }
-
-    public class User
-    {
-        public ObjectId Id { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public string Age { get; set; }
-        public string  { get; set; }
-        public string Age { get; set; }
-        public string Age { get; set; }
-        public string Age { get; set; }
-        public string Age { get; set; }
     }
 }

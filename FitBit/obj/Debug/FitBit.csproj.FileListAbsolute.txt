@@ -122,3 +122,4 @@ C:\Users\Ivan\Documents\FitBit\FitBit\bin\Debug\System.Net.Http.WebRequest.xml
 C:\Users\Ivan\Documents\FitBit\FitBit\bin\Debug\Org.Mentalis.Security.Cryptography.xml
 C:\Users\Ivan\Documents\FitBit\FitBit\bin\Debug\Mono.Math.xml
 C:\Users\Ivan\Documents\FitBit\FitBit\obj\Debug\FitBit.csprojResolveAssemblyReference.cache
+C:\Petra\FER\Diplomski\Biomedicinska Informatika\MCS Seminar\FitBit\FitBit\FitBit\bin\Debug\FitBit.exe.config
