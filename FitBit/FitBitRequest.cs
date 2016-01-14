@@ -7,6 +7,9 @@ using System.Web;
 using System.Net;
 using System.Collections.Specialized;
 using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 
 namespace FitBit
 {
@@ -32,11 +35,14 @@ namespace FitBit
 
             //Response results - contains requested data
             WebResponse response;
-            string results = "";
+            var results = "";
             response = request.GetResponse();
             StreamReader HttpStreamReader = new StreamReader(response.GetResponseStream());
             results = HttpStreamReader.ReadToEnd();
-            Console.Write(results);
+
+            JObject resultsJSON = JObject.Parse(results);
+
+
 
             response.Close();
             HttpStreamReader.Close();
