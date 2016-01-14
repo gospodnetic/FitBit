@@ -48,12 +48,13 @@ namespace MongoConnection
                 line2 = reader.ReadToEnd();
             }
 
-            var a = JsonConvert.SerializeObject(new
+            var combinedJson = JsonConvert.SerializeObject(new
             {
                 obj1 = JObject.Parse(line1),
                 obj2 = JObject.Parse(line2)
             });
-            MongoDB.Bson.BsonDocument document = MongoDB.Bson.Serialization.BsonSerializer.Deserialize<BsonDocument>(a);
+
+            MongoDB.Bson.BsonDocument document = MongoDB.Bson.Serialization.BsonSerializer.Deserialize<BsonDocument>(combinedJson);
             FitBitContext ctx = new FitBitContext();
             ctx.Users.InsertOne(document);
         }
