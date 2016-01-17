@@ -51,9 +51,9 @@ namespace FitBit
 
         public void Authenticate()
         {
-            //var brow = System.Diagnostics.Process.Start("https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=229XX2&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftest%2F&scope=profile%20activity");
-            WebBrowser browser = new WebBrowser();
-            browser.Navigate("https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=229XX2&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftest%2F&scope=profile%20activity");
+            var brow = System.Diagnostics.Process.Start("https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=229XX2&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftest%2F&scope=profile%20activity");
+            //WebBrowser browser = new WebBrowser();
+            //browser.Navigate("https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=229XX2&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftest%2F&scope=profile%20activity");
         }
 
         //  Generating request to exchange authentication code for access token

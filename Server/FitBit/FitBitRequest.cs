@@ -9,10 +9,31 @@ using System.Collections.Specialized;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using MongoDB.Driver;
+using MongoDB.Bson;
 
 
 namespace FitBit
 {
+    class FitBitContext
+    {
+        private IMongoDatabase db;
+
+        public FitBitContext()
+        {
+            var client = new MongoClient();
+            db = client.GetDatabase("FitBit");
+            var collection = db.GetCollection<BsonDocument>("Users");
+        }
+
+        public IMongoCollection<BsonDocument> Users
+        {
+            get
+            {
+                return db.GetCollection<BsonDocument>("Users");
+            }
+        }
+    }
 
     public class JSONUserID
     {
@@ -56,6 +77,18 @@ namespace FitBit
             JObject resultsJSON = JObject.Parse(results);
 
             Console.Write(resultsJSON);
+            
+            var combinedJson = JsonConvert.SerializeObject(new
+            {
+                jsonUserID,
+                resultsJSON
+            });
+
+            MongoDB.Bson.BsonDocument document = MongoDB.Bson.Serialization.BsonSerializer.Deserialize<BsonDocument>(combinedJson);
+            FitBitContext ctx = new FitBitContext();
+            ctx.Users.InsertOne(document);
+
+
 
             response.Close();
             HttpStreamReader.Close();

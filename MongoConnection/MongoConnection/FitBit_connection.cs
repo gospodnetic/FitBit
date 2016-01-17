@@ -9,7 +9,6 @@ using MongoDB.Driver;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-
 namespace MongoConnection
 {
     class FitBitContext
@@ -56,6 +55,13 @@ namespace MongoConnection
 
             MongoDB.Bson.BsonDocument document = MongoDB.Bson.Serialization.BsonSerializer.Deserialize<BsonDocument>(combinedJson);
             FitBitContext ctx = new FitBitContext();
+            //if (ctx.Users.Find<BsonDocument> document["user"]["age"].AsString)
+            //FilterDefinition<BsonDocument> filter = "{ age: 2 }";
+            //var found = ctx.Users.Find<BsonDocument>(filter);
+            var filter = Builders<BsonDocument>.Filter.Eq("age", "28");
+            var result = ctx.Users.Find(filter).ToListAsync();
+            // NE RADI
+            Console.WriteLine(result);
             ctx.Users.InsertOne(document);
         }
     }
